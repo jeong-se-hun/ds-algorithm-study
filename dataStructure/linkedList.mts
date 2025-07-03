@@ -9,18 +9,18 @@
  * - 인덱스 읽기
  */
 
-class Node {
-  data: number;
-  next: Node | null;
+class Node<T> {
+  data: T;
+  next: Node<T> | null;
 
-  constructor(data: number, next: Node | null = null) {
+  constructor(data: T, next: Node<T> | null = null) {
     this.data = data;
     this.next = next;
   }
 }
 
-class LinkedList {
-  head: Node | null;
+class LinkedList<T> {
+  head: Node<T> | null;
   count: number;
 
   constructor() {
@@ -28,7 +28,7 @@ class LinkedList {
     this.count = 0;
   }
 
-  insertAt(index: number, data: number) {
+  insertAt(index: number, data: T) {
     if (index > this.count || index < 0) {
       throw new Error("범위 초과");
     }
@@ -55,7 +55,7 @@ class LinkedList {
     let text = "[";
 
     while (currentNode !== null) {
-      text += currentNode.data;
+      text += JSON.stringify(currentNode.data);
       currentNode = currentNode.next;
       if (currentNode != null) text += ", ";
     }
@@ -69,7 +69,7 @@ class LinkedList {
     this.count = 0;
   }
 
-  insertLast(data: number) {
+  insertLast(data: T) {
     this.insertAt(this.count, data);
   }
 
