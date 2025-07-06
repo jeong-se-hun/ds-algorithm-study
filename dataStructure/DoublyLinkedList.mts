@@ -8,6 +8,8 @@
  * - 마지막 삭제
  * - 인덱스 읽기
  */
+// DoublyLinkedList
+// 각 노드가 이전 노드와 다음 노드를 모두 가리키는 선형 자료구조
 
 class Node<T> {
   data: T;

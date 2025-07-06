@@ -1,3 +1,5 @@
+// Queue
+// 선입선출(FIFO) 원칙을 따르는 자료구조
 import { DoublyLinkedList } from "./DoublyLinkedList.mts";
 
 class Queue<T> {

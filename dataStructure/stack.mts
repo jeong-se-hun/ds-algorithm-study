@@ -1,3 +1,5 @@
+// Stack
+// 후입선출(LIFO) 원칙을 따르는 자료구조
 import { LinkedList } from "./linkedList.mts";
 
 class Stack<T> {
